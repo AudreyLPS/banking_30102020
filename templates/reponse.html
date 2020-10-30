@@ -1,12 +1,29 @@
 <html>
   <head>
     <title>Output datas</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
   </head>
   <body style="background-image: url('/static/images/cleard.png');">
     
-    <h4>{{ prediction[1]*100 }} </h4>
-    <h4>{{ prediction[0] }} </h4>
-    </ul>
+    <div class="row justify-content-md-center">
+      {% if prediction[0]=="Accepter" %}
+        <img src="../static/images/credit-accepte.jpg"/>
+      {% endif %}
+      {% if prediction[0]=="Refuser" %}
+        <img src="../static/images/credit-refuse.jpg"/>
+      {% endif %}
+      
+    </div>
+    <div class="row justify-content-md-center">
+      pourcentage de precision: {{ prediction[1]*100 }}%
+    </div>
+    <div class="row justify-content-md-center">
+      <form action="/prediction" method="POST">
+        <input class="btn btn-info" type="submit" value="Nouvelle prediction" />
+      </form>
+    </div>
   </body>
 
 </html>
