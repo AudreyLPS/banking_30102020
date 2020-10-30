@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Boule de cristal</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles/index.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  </head>
+  <body style="background-image: url('/static/images/euro.jpg');">
+    <div class="container">
+      <div class="paytext">
+        <h4>Veuillez saisir les informations client suivantes</h4>
+      </div>
+
+      <form action="/reponse" method="POST" class="form-group">
+        <label>Âge</label>
+        <input class="form-control" type="integer" name="input_age" />
+      </br>
+        <label>Situation</label>
+        <select name="input_marital" id="input_marital_select">
+          <option value="0">Marrié</option>
+          <option value="1">Célibataire</option>
+          <option value="2">Divorcé</option>
+        </select>
+      </br>
+        <label>Niveau scolaire</label>
+        <select name="input_education" id="input_education_select">
+          <option value="0">Bac</option>
+          <option value="1">Bac +2</option>
+          <option value="2">Bac +5</option>
+          <option value="3">Non renseigné</option>
+        </select> 
+      </br>
+        <label>Grade</label>
+        <select name="input_job" id="input_grade_select">
+          <option value="0">Non renseigné</option>
+          <option value="1">Col bleu</option>
+          <option value="2">Management</option>
+          <option value="3">Technicien</option>
+          <option value="4">Administrateur</option>
+          <option value="5">Services</option>
+          <option value="6">Retraité</option>
+          <option value="7">Travailleur indépendant</option>
+          <option value="8">Entrepreneur</option>
+          <option value="9">Sans emploi</option>
+          <option value="10">Femme de chambre</option>
+          <option value="11">Étudiant</option>
+        </select>
+      </br>
+        <label>A t-il des crédit en cours </label>
+        <select name="input_default" id="input_default_select">
+          <option value="0">Non</option>
+          <option value="1">Oui</option>
+        </select>
+      </br>
+        <label>Compte courant</label>
+        <input type="float" name="input_balance" />
+      </br>
+        <label>A t-il un crédit immobilier </label>
+        <select name="input_housing" id="input_housing_select">
+          <option value="0">Non</option>
+          <option value="1">Oui</option>
+        </select>
+      </br>
+        <label>A t-il un crédit personel </label>
+        <select name="input_loan" id="input_loan_select">
+          <option value="0">Non</option>
+          <option value="1">Oui</option>
+        </select>
+      </br>
+        <label>Nombre de contact sur la derniere campagne </label>
+        <input type="integer" name="input_campaign" />
+      </br>
+        <label>Durée du dernière appel</label>
+        <input type="integer" name="input_duration" />
+      </br>
+        <label>Cet appel à eu lieu il y à combien de jour</label>
+        <input type="integer" name="input_pdays" />
+      </br>
+        <label>Nombre de contact avant la derniere campagne </label>
+        <input type="integer" name="input_previous" />
+      </br>
+        <label>Résultat de la derniere campagne </label>
+        <select name="input_poutcome" id="input_poutcome_select">
+          <option value="0">Non renseigné</option>
+          <option value="1">Échec</option>
+          <option value="3">Réussite</option>
+          <option value="3">Autre</option>
+        </select>
+      </br>
+        <input type="submit" value="Let's Go" />
+      </form>
+    </div>
+  </body>
+</html>
