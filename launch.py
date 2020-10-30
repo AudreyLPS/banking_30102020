@@ -32,9 +32,9 @@ def reponse():
 
     parametres = [input_age,input_job,input_marital,input_education,input_default,input_balance,input_housing,input_loan,input_duration,input_campaign,input_pdays,input_previous,input_poutcome]
     prediction=model(parametres)
-    #print(prediction)
+   
     return render_template("reponse.html",prediction=prediction)
-    #return render_template("reponse.html")
+    
 
 if __name__ == "__main__":
     app.run()
